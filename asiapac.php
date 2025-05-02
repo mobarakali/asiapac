@@ -14,6 +14,15 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
+// Add the Enquire Now button after the product title.
+add_action( 'woocommerce_single_product_summary', 'asiapac_product_page_buttons', 6 );
+function asiapac_product_page_buttons() {
+    $enquiry_link = site_url( '/contact' ); // Change this to your actual enquiry page URL.
+    $call_now = "tel:0451353676"; // Replace with your phone number
+    echo '<a class="asiapac_product_page_button" href="' . esc_url( $call_now ) . '">Call Now</a> ';
+    echo '<a class="asiapac_product_page_button" href="' . esc_url( $enquiry_link ) . '">Enquire Now</a>';
+}
+
 
 // Add a custom button to the right of the site
 add_action( 'wp_footer', 'asiapac_add_side_button' );
@@ -32,7 +41,6 @@ function asiapac_add_side_button() {
             <i class="fas fa-calendar-check"></i> Enquire Now
         </a>
     </div>
-
 
     <style>
         /* side button styles */
@@ -59,6 +67,24 @@ function asiapac_add_side_button() {
         }
 
         .asiapac-side-button:hover {
+            background: rgba(103, 194, 124, 0.90);
+            color: #fff;
+        }
+        .asiapac_product_page_button{
+            background: rgb(103, 194, 124);
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            outline: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background  .5s ease;
+        }
+        .asiapac_product_page_button:hover {
             background: rgba(103, 194, 124, 0.90);
             color: #fff;
         }
