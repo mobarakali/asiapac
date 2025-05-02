@@ -99,7 +99,7 @@ function asiapac_add_side_button() {
 
         @media (max-width: 767px) {
             .asiapac-side-button {
-                /* display: none; */
+                display: none;
             }
             .asiapac-mobile-buttons {
                 display: flex;
