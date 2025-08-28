@@ -15,13 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 // Add the Enquire Now button after the product title.
-add_action( 'woocommerce_product_meta_end', 'asiapac_product_page_buttons', 6 );
-function asiapac_product_page_buttons() {
-    $enquiry_link = site_url( '/contact' ); // Change this to your actual enquiry page URL.
-    $call_now = "tel:0451353676"; // Replace with your phone number
-    echo '<br><a class="asiapac_product_page_button" href="' . esc_url( $call_now ) . '">Call Now</a> ';
-    echo '<a class="asiapac_product_page_button" href="' . esc_url( $enquiry_link ) . '">Enquire Now</a>';
-}
+// add_action( 'woocommerce_product_meta_end', 'asiapac_product_page_buttons', 6 );
+// function asiapac_product_page_buttons() {
+//     $enquiry_link = site_url( '/contact' ); // Change this to your actual enquiry page URL.
+//     $call_now = "tel:0451353676"; // Replace with your phone number
+//     echo '<br><a class="asiapac_product_page_button" href="' . esc_url( $call_now ) . '">Call Now</a> ';
+//     echo '<a class="asiapac_product_page_button" href="' . esc_url( $enquiry_link ) . '">Enquire Now</a>';
+// }
 
 
 // Add a custom button to the right of the site
@@ -71,7 +71,7 @@ function asiapac_add_side_button() {
             color: #fff;
         }
         /* Product Page Buttons */
-        .asiapac_product_page_button{
+        /* .asiapac_product_page_button{
             background: rgb(103, 194, 124);
             color: #fff;
             cursor: pointer;
@@ -89,7 +89,7 @@ function asiapac_add_side_button() {
         .asiapac_product_page_button:hover {
             background: rgba(103, 194, 124, 0.90);
             color: #fff;
-        }
+        } */
 
         /* Mobile Buttons */
         
