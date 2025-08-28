@@ -70,6 +70,7 @@ function asiapac_add_side_button() {
             background: rgba(103, 194, 124, 0.90);
             color: #fff;
         }
+        /* Product Page Buttons */
         .asiapac_product_page_button{
             background: rgb(103, 194, 124);
             color: #fff;
